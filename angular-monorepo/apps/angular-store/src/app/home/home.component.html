@@ -1,3 +1,25 @@
 <h1>{{title}}</h1>
 
 <p>home works!</p>
+
+@if (weather$ | async)
+{
+    <table>
+        <tr>
+            <th>date</th>
+            <th>temperatureC</th>
+            <th>temperatureF</th>
+            <th>summary</th>
+        </tr>
+        @for(item of weather$ | async; track $index)
+        {
+        <tr>
+            <td>{{item.date}}</td>
+            <td>{{item.temperatureC}}</td>
+            <td>{{item.temperatureF}}</td>
+            <td>{{item.summary}}</td>
+        </tr>
+        }
+    </table>
+}
+   
