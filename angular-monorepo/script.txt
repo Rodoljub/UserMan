@@ -1,0 +1,6 @@
+nx g @nx/angular:component my-component
+
+nx g @nx/angular:component my-component --changeDetection=OnPush
+
+Show what will be generated without writing to disk:
+nx g component ... --dry-run
